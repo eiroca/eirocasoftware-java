@@ -1,19 +1,17 @@
 /**
  * Copyright (C) 2006-2010 eIrOcA (eNrIcO Croce & sImOnA Burzio)
  *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the
+ * GNU Lesser General Public License as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+ * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/
- * 
+ * You should have received a copy of the GNU Lesser General Public License along with this program.
+ * If not, see <http://www.gnu.org/licenses/
+ *
  */
 package net.eiroca.tree.io;
 
@@ -21,10 +19,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import org.xml.sax.Attributes;
 import net.eiroca.tree.model.MetaDataCollector;
 import net.eiroca.tree.model.TreeNode;
 import net.eiroca.tree.model.TreeReader;
-import org.xml.sax.Attributes;
 
 /**
  * The Class TAGMeta.
@@ -35,11 +33,11 @@ public class TAGMeta<TR extends TreeReader<?>> extends TAG<TR> {
   public String ATR_ID = "id";
 
   /** The Constant order. */
-  protected final static List<String> order = new ArrayList<String>();
+  protected final static List<String> order = new ArrayList<>();
 
   /**
    * Instantiates a new tAG meta.
-   * 
+   *
    * @param name the name
    */
   public TAGMeta(final String name) {
@@ -48,7 +46,7 @@ public class TAGMeta<TR extends TreeReader<?>> extends TAG<TR> {
 
   /**
    * Read meta.
-   * 
+   *
    * @param meta the meta
    * @param attribs the attribs
    */
@@ -64,12 +62,12 @@ public class TAGMeta<TR extends TreeReader<?>> extends TAG<TR> {
 
   /**
    * Write meta.
-   * 
+   *
    * @param buf the buffer
    * @param meta the meta
    */
   public void writeMeta(final StringBuffer buf, final Map<String, String> meta) {
-    final HashSet<String> done = new HashSet<String>();
+    final HashSet<String> done = new HashSet<>();
     for (final String metaName : TAGMeta.order) {
       final String val = meta.get(metaName);
       if (val != null) {
@@ -86,10 +84,10 @@ public class TAGMeta<TR extends TreeReader<?>> extends TAG<TR> {
 
   /**
    * Write node.
-   * 
+   *
    * @param buf the buf
    * @param node the node
-   * 
+   *
    * @return true, if successful
    */
   public boolean writeNode(final StringBuffer buf, final TreeNode node) {

@@ -1,19 +1,17 @@
 /**
  * Copyright (C) 2006-2010 eIrOcA (eNrIcO Croce & sImOnA Burzio)
  *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the
+ * GNU Lesser General Public License as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+ * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/
- * 
+ * You should have received a copy of the GNU Lesser General Public License along with this program.
+ * If not, see <http://www.gnu.org/licenses/
+ *
  */
 package net.eiroca.tree.model;
 
@@ -29,7 +27,7 @@ public abstract class Tree<TN extends TreeNode> implements MetaDataCollector {
   protected TN root;
 
   /** The meta. */
-  protected final Map<String, String> meta = new HashMap<String, String>();
+  protected final Map<String, String> meta = new HashMap<>();
 
   /**
    * Instantiates a new tree.
@@ -47,7 +45,7 @@ public abstract class Tree<TN extends TreeNode> implements MetaDataCollector {
 
   /**
    * Clone childs.
-   * 
+   *
    * @param level the level
    * @param parent the parent
    * @param srcNode the src node
@@ -66,7 +64,7 @@ public abstract class Tree<TN extends TreeNode> implements MetaDataCollector {
 
   /**
    * Execute.
-   * 
+   *
    * @param action the action
    * @param nodeFirst the node first
    */
@@ -76,21 +74,21 @@ public abstract class Tree<TN extends TreeNode> implements MetaDataCollector {
 
   /**
    * Find by id.
-   * 
+   *
    * @param theID the the id
    * @param exact the exact
-   * 
+   *
    * @return the tree node
    */
   @SuppressWarnings("unchecked")
   public TN findByID(final String theID, final boolean exact) {
-    final TN node = (TN) root.findByID(theID, exact);
+    final TN node = (TN)root.findByID(theID, exact);
     return (node == null ? root : node);
   }
 
   /**
    * Gets the meta.
-   * 
+   *
    * @return the meta
    */
   public Map<String, String> getMeta() {
@@ -108,7 +106,7 @@ public abstract class Tree<TN extends TreeNode> implements MetaDataCollector {
 
   /**
    * Gets the root.
-   * 
+   *
    * @return the root
    */
   public TN getRoot() {
@@ -117,7 +115,7 @@ public abstract class Tree<TN extends TreeNode> implements MetaDataCollector {
 
   /**
    * Import from.
-   * 
+   *
    * @param source the source
    */
   public void importFrom(final Tree<? extends TreeNode> source) {
@@ -134,10 +132,10 @@ public abstract class Tree<TN extends TreeNode> implements MetaDataCollector {
 
   /**
    * New node.
-   * 
+   *
    * @param level the level
    * @param source the source
-   * 
+   *
    * @return the tN
    */
   abstract public TN newNode(int level, TreeNode source);
@@ -160,7 +158,7 @@ public abstract class Tree<TN extends TreeNode> implements MetaDataCollector {
 
   /**
    * Sets the root.
-   * 
+   *
    * @param root the new root
    */
   public void setRoot(final TN root) {

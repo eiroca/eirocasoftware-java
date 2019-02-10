@@ -1,19 +1,17 @@
 /**
  * Copyright (C) 2006-2010 eIrOcA (eNrIcO Croce & sImOnA Burzio)
  *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the
+ * GNU Lesser General Public License as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+ * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/
- * 
+ * You should have received a copy of the GNU Lesser General Public License along with this program.
+ * If not, see <http://www.gnu.org/licenses/
+ *
  */
 package net.eiroca.tree.io;
 
@@ -25,12 +23,12 @@ import java.util.Stack;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-import net.eiroca.tree.model.Tree;
-import net.eiroca.tree.model.TreeReader;
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
+import net.eiroca.tree.model.Tree;
+import net.eiroca.tree.model.TreeReader;
 
 /**
  * The Class XMLHandler.
@@ -41,10 +39,10 @@ public class XMLHandler<TR extends Tree<?>> extends DefaultHandler implements Tr
   public TR tree;
 
   /** The data. */
-  public Map<String, String> data = new HashMap<String, String>();
+  public Map<String, String> data = new HashMap<>();
 
   /** The procs. */
-  public Stack<TagProcessor<TreeReader<?>>> procs = new Stack<TagProcessor<TreeReader<?>>>();
+  public Stack<TagProcessor<TreeReader<?>>> procs = new Stack<>();
 
   /*
    * (non-Javadoc)

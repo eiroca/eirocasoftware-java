@@ -1,19 +1,17 @@
 /**
  * Copyright (C) 2006-2010 eIrOcA (eNrIcO Croce & sImOnA Burzio)
  *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the
+ * GNU Lesser General Public License as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+ * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/
- * 
+ * You should have received a copy of the GNU Lesser General Public License along with this program.
+ * If not, see <http://www.gnu.org/licenses/
+ *
  */
 package net.eiroca.tree.model;
 
@@ -38,14 +36,14 @@ public class GenericTreeNode<T extends TreeNode> implements TreeNode, Iterable<T
   protected Tree<T> owner;
 
   /** The children. */
-  protected final List<T> children = new ArrayList<T>();
+  protected final List<T> children = new ArrayList<>();
 
   /** The meta. */
-  protected final Map<String, String> meta = new HashMap<String, String>();
+  protected final Map<String, String> meta = new HashMap<>();
 
   /**
    * Instantiates a new tree node.
-   * 
+   *
    * @param owner the owner
    */
   public GenericTreeNode(final Tree<T> owner) {
@@ -54,7 +52,7 @@ public class GenericTreeNode<T extends TreeNode> implements TreeNode, Iterable<T
 
   /**
    * Instantiates a new tree node.
-   * 
+   *
    * @param ownerTree the owner tree
    * @param sourceNode the source node
    */
@@ -73,14 +71,14 @@ public class GenericTreeNode<T extends TreeNode> implements TreeNode, Iterable<T
   @Override
   @SuppressWarnings("unchecked")
   public void addChild(final TreeNode child) {
-    final T aChild = (T) child;
+    final T aChild = (T)child;
     children.add(aChild);
     child.setParent(this);
   }
 
   /**
    * Builds the id.
-   * 
+   *
    * @param prefix the prefix
    * @param pos the pos
    */
@@ -97,7 +95,7 @@ public class GenericTreeNode<T extends TreeNode> implements TreeNode, Iterable<T
 
   /**
    * Execute.
-   * 
+   *
    * @param action the action
    * @param nodeFirst the node first
    */
@@ -116,10 +114,10 @@ public class GenericTreeNode<T extends TreeNode> implements TreeNode, Iterable<T
 
   /**
    * Find by id.
-   * 
+   *
    * @param aID the a id
    * @param exact the exact
-   * 
+   *
    * @return the tree node
    */
   @Override
@@ -152,7 +150,7 @@ public class GenericTreeNode<T extends TreeNode> implements TreeNode, Iterable<T
 
   /**
    * Gets the children count.
-   * 
+   *
    * @return the children count
    */
   @Override
@@ -162,7 +160,7 @@ public class GenericTreeNode<T extends TreeNode> implements TreeNode, Iterable<T
 
   /**
    * Gets the iD.
-   * 
+   *
    * @return the iD
    */
   @Override
@@ -172,7 +170,7 @@ public class GenericTreeNode<T extends TreeNode> implements TreeNode, Iterable<T
 
   /**
    * Gets the meta.
-   * 
+   *
    * @return the meta
    */
   @Override
@@ -191,7 +189,7 @@ public class GenericTreeNode<T extends TreeNode> implements TreeNode, Iterable<T
 
   /**
    * Gets the owner.
-   * 
+   *
    * @return the owner
    */
   @Override
@@ -201,7 +199,7 @@ public class GenericTreeNode<T extends TreeNode> implements TreeNode, Iterable<T
 
   /**
    * Gets the parent.
-   * 
+   *
    * @return the parent
    */
   @Override
@@ -211,7 +209,7 @@ public class GenericTreeNode<T extends TreeNode> implements TreeNode, Iterable<T
 
   /**
    * Checks for children.
-   * 
+   *
    * @return true, if successful
    */
   @Override
@@ -241,7 +239,7 @@ public class GenericTreeNode<T extends TreeNode> implements TreeNode, Iterable<T
 
   /**
    * Sets the iD.
-   * 
+   *
    * @param aID the new iD
    */
   @Override
@@ -265,13 +263,13 @@ public class GenericTreeNode<T extends TreeNode> implements TreeNode, Iterable<T
 
   /**
    * Sets the parent.
-   * 
+   *
    * @param parent the new parent
    */
   @Override
   @SuppressWarnings("unchecked")
   public void setParent(final TreeNode parent) {
-    this.parent = (T) parent;
+    this.parent = (T)parent;
   }
 
 }

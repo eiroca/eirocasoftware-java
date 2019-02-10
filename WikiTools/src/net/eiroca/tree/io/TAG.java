@@ -1,25 +1,23 @@
 /**
  * Copyright (C) 2006-2010 eIrOcA (eNrIcO Croce & sImOnA Burzio)
  *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * This program is free software: you can redistribute it and/or modify it under the terms of the
+ * GNU Lesser General Public License as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+ * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/
- * 
+ * You should have received a copy of the GNU Lesser General Public License along with this program.
+ * If not, see <http://www.gnu.org/licenses/
+ *
  */
 package net.eiroca.tree.io;
 
 import java.util.Map;
-import net.eiroca.tree.model.TreeReader;
 import org.xml.sax.Attributes;
+import net.eiroca.tree.model.TreeReader;
 
 /**
  * The Class TAG.
@@ -28,7 +26,7 @@ public class TAG<TR extends TreeReader<?>> implements TagProcessor<TR> {
 
   /**
    * Encode.
-   * 
+   *
    * @param buf the buf
    * @param str the str
    */
@@ -62,13 +60,13 @@ public class TAG<TR extends TreeReader<?>> implements TagProcessor<TR> {
 
   /**
    * Instantiates a new tAG.
-   * 
+   *
    * @param name the name
    */
   @SuppressWarnings("unchecked")
   public TAG(final String name) {
     tagName = name;
-    TagFactory.register((TagProcessor<TreeReader<?>>) this);
+    TagFactory.register((TagProcessor<TreeReader<?>>)this);
   }
 
   /*
@@ -86,7 +84,7 @@ public class TAG<TR extends TreeReader<?>> implements TagProcessor<TR> {
 
   /**
    * Close.
-   * 
+   *
    * @param buf the buf
    * @param compact the compact
    */
@@ -126,7 +124,7 @@ public class TAG<TR extends TreeReader<?>> implements TagProcessor<TR> {
 
   /**
    * Open.
-   * 
+   *
    * @param buf the buf
    * @param open the open
    */
@@ -140,7 +138,7 @@ public class TAG<TR extends TreeReader<?>> implements TagProcessor<TR> {
 
   /**
    * Open close.
-   * 
+   *
    * @param buf the buf
    */
   public void openClose(final StringBuffer buf) {
@@ -149,7 +147,7 @@ public class TAG<TR extends TreeReader<?>> implements TagProcessor<TR> {
 
   /**
    * Sets the name.
-   * 
+   *
    * @param name the new name
    */
   public void setName(final String name) {
@@ -168,7 +166,7 @@ public class TAG<TR extends TreeReader<?>> implements TagProcessor<TR> {
 
   /**
    * Write attribute.
-   * 
+   *
    * @param buf the buf
    * @param name the name
    * @param value the value
@@ -187,7 +185,7 @@ public class TAG<TR extends TreeReader<?>> implements TagProcessor<TR> {
 
   /**
    * Write c data.
-   * 
+   *
    * @param buf the buf
    * @param data the data
    */
@@ -199,7 +197,7 @@ public class TAG<TR extends TreeReader<?>> implements TagProcessor<TR> {
 
   /**
    * Write int.
-   * 
+   *
    * @param buf the buf
    * @param atr the atr
    * @param defVal the def val
@@ -213,7 +211,7 @@ public class TAG<TR extends TreeReader<?>> implements TagProcessor<TR> {
 
   /**
    * Write string.
-   * 
+   *
    * @param buf the buf
    * @param atr the atr
    * @param val the val
