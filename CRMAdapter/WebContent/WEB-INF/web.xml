@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>CRMAdapter</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+ <display-name>Adapter HTTP Interface</display-name>
+  <description>HTTP Interface for SIS back end</description>
+  <servlet>
+    <description>Back End Interface</description>
+    <display-name>Back End Interface</display-name>
+    <servlet-name>beinterface</servlet-name>
+    <servlet-class>net.eiroca.crmadapter.httpinterface.servlets.BEInterfaceServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>Front End Interface</description>
+    <display-name>Front End Interface</display-name>
+    <servlet-name>feinterface</servlet-name>
+    <servlet-class>net.eiroca.crmadapter.httpinterface.servlets.FEInterfaceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>beinterface</servlet-name>
+    <url-pattern>/beinterface</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>feinterface</servlet-name>
+    <url-pattern>/feinterface</url-pattern>
+  </servlet-mapping>
+  </web-app>
