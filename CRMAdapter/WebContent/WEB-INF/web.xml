@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-  <display-name>CRMAdapter</display-name>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>Adapter HTTP Interface</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -9,7 +9,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
- <display-name>Adapter HTTP Interface</display-name>
   <description>HTTP Interface for SIS back end</description>
   <servlet>
     <description>Back End Interface</description>
@@ -31,4 +30,4 @@
     <servlet-name>feinterface</servlet-name>
     <url-pattern>/feinterface</url-pattern>
   </servlet-mapping>
-  </web-app>
+</web-app>
