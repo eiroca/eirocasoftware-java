@@ -9,7 +9,29 @@
   <name>Base64</name>
   <artifactId>Base64</artifactId>
   <packaging>jar</packaging>
-   <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+   <build>
+      <plugins>
+         <!-- Make this jar executable -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <configuration>
+               <!-- DO NOT include log4j.properties file in your Jar -->
+               <excludes>
+                  <exclude>**/log4j.properties</exclude>
+                  <exclude>**/simplelogger.properties</exclude>
+               </excludes>
+               <archive>
+                  <manifest>
+                     <addClasspath>true</addClasspath>
+                     <mainClass>Main</mainClass>
+                     <classpathPrefix>libs/</classpathPrefix>
+                  </manifest>
+               </archive>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>   <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
    <dependencies>
       <dependency>
          <groupId>commons-codec</groupId>
