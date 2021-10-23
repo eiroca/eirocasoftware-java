@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>net.eiroca</groupId>
@@ -9,34 +8,34 @@
   <name>Base64</name>
   <artifactId>Base64</artifactId>
   <packaging>jar</packaging>
-   <build>
-      <plugins>
-         <!-- Make this jar executable -->
-         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <configuration>
-               <!-- DO NOT include log4j.properties file in your Jar -->
-               <excludes>
-                  <exclude>**/log4j.properties</exclude>
-                  <exclude>**/simplelogger.properties</exclude>
-               </excludes>
-               <archive>
-                  <manifest>
-                     <addClasspath>true</addClasspath>
-                     <mainClass>Main</mainClass>
-                     <classpathPrefix>libs/</classpathPrefix>
-                  </manifest>
-               </archive>
-            </configuration>
-         </plugin>
-      </plugins>
-   </build>   <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
-   <dependencies>
-      <dependency>
-         <groupId>commons-codec</groupId>
-         <artifactId>commons-codec</artifactId>
-         <version>${commons-codecs.version}</version>
-      </dependency>
-   </dependencies>
+  <build>
+    <plugins>
+      <!-- Make this jar executable -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <!-- DO NOT include log4j.properties file in your Jar -->
+          <excludes>
+            <exclude>**/log4j.properties</exclude>
+            <exclude>**/simplelogger.properties</exclude>
+          </excludes>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>Main</mainClass>
+              <classpathPrefix>libs/</classpathPrefix>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>   <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+  <dependencies>
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>${commons-codecs.version}</version>
+    </dependency>
+  </dependencies>
 </project>

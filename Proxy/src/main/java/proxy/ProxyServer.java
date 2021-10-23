@@ -51,7 +51,7 @@ public class ProxyServer implements Runnable {
 
   protected void gotconn(final Socket sconn) throws Exception {
     if (debug) {
-      System.out.print("Connection accepted");
+      System.out.println("Connection accepted from "+sconn.getRemoteSocketAddress());
     }
     final ProxyConn pc = new ProxyConn(sconn, targetHost, targetPort, dump);
     pc.debug = debug;

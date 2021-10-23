@@ -21,10 +21,15 @@ public class Proxy {
 
   public static void main(final String args[]) {
     final String targetHost = args.length > 0 ? args[0] : null;
-    final int targetPort = args.length > 1 ? new Integer(args[1]) : null;
-    final int localPort = args.length > 2 ? new Integer(args[2]) : targetPort;
-    final ProxyServer proxy = new ProxyServer(targetHost, targetPort, localPort, false);
-    proxy.start();
+    final Integer targetPort = args.length > 1 ? new Integer(args[1]) : null;
+    final Integer localPort = args.length > 2 ? new Integer(args[2]) : targetPort;
+    if (targetHost == null || targetPort == null || localPort == null) {
+      System.err.println("Syntax tagethost targetport localport");
+    }
+    else {
+      final ProxyServer proxy = new ProxyServer(targetHost, targetPort, localPort, false);
+      proxy.start();
+    }
   }
 
 }
