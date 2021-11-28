@@ -10,7 +10,7 @@ public class Main {
         String text = args[i];
         final String encodedVersion = new String(base64.encode(text.getBytes()));
         final String decodedVersion = new String(base64.decode(text.getBytes()));
-        System.out.println(MessageFormat.format("{0} Encoded Version is {1}", text, encodedVersion));
+        System.out.println(MessageFormat.format("{0} Encoded version is {1}", text, encodedVersion));
         System.out.println(MessageFormat.format("{0} Decoded version is {1}", text, decodedVersion));
       }
     }
