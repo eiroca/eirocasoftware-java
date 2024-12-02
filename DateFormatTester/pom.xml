@@ -5,15 +5,30 @@
     <artifactId>eirocasoftware-java</artifactId>
     <version>0.0.10-SNAPSHOT</version>
   </parent>
-  <name>DateFormatTesterr</name>
+  <name>DateFormatTester</name>
   <artifactId>DateFormatTester</artifactId>
   <packaging>jar</packaging>
-  <dependencies>
-    <dependency>
-      <groupId>org.apache.flume</groupId>
-      <artifactId>flume-ng-core</artifactId>
-      <version>1.7.0</version>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
+  <build>
+    <plugins>
+      <!-- Make this jar executable -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <!-- DO NOT include log4j.properties file in your Jar -->
+          <excludes>
+            <exclude>**/log4j.properties</exclude>
+            <exclude>**/simplelogger.properties</exclude>
+          </excludes>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>Main</mainClass>
+              <classpathPrefix>libs/</classpathPrefix>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>   
 </project>

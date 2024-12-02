@@ -5,11 +5,7 @@ import java.time.format.DateTimeParseException;
 import java.util.Locale;
 import java.util.StringTokenizer;
 
-public class JavaDateParser {
-
-  public static String localeToString(final Locale l) {
-    return l.getLanguage() + "," + l.getCountry();
-  }
+public class Main {
 
   public static Locale stringToLocale(final String s) {
     final StringTokenizer tempStringTokenizer = new StringTokenizer(s, ",");
@@ -25,8 +21,13 @@ public class JavaDateParser {
   }
 
   public static void test(final String val, final String format, final String locale) {
-    final DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format, JavaDateParser.stringToLocale(locale)).withZone(ZoneId.systemDefault());
+    Locale l = Main.stringToLocale(locale);
+    ZoneId zid = ZoneId.systemDefault();
+    final DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format, l).withZone(zid);
     System.out.println("Date Str : " + val);
+    System.out.println("Pattern  : " + format);
+    System.out.println("Locale   : " + l);
+    System.out.println("ZoneID   : " + zid);
     System.out.println("Formatter: " + formatter);
     ZonedDateTime dt = null;
     try {
@@ -41,8 +42,7 @@ public class JavaDateParser {
       if (end > val.length()) {
         end = val.length();
       }
-      System.out.println("Errore a: " + val.substring(s, end));
-      // TODO Auto-generated catch block
+      System.out.println("Error   @: " + val.substring(s, end));
       e.printStackTrace();
     }
     System.out.println("DateTime : " + dt);
@@ -50,9 +50,14 @@ public class JavaDateParser {
   }
 
   public static void main(final String[] args) {
-    JavaDateParser.test("Wed Mar 08 05:11:05 2017", "eee MMM dd HH:mm:ss yyyy", "en");
-    JavaDateParser.test("2017-03-09T13:04:32.124+01:00", "yyyy-MM-dd'T'HH:mm:ss.SSSXXX", "en");
-    JavaDateParser.test("2017-03-09T13:04:32.124+02:00", "yyyy-MM-dd'T'HH:mm:ss.SSSXXX", "en");
+    if ((args.length != 2) && (args.length != 3)) {
+      System.err.println("usage: " + Main.class.getCanonicalName() + " string pattern [locale]");
+      System.exit(1);
+    }
+    String date = args[0];
+    String pattern = args[1];
+    String locale = (args.length == 3) ? args[2] : "en";
+    Main.test(date, pattern, locale);
   }
 
 }

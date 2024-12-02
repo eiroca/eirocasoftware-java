@@ -5,8 +5,8 @@
     <artifactId>eirocasoftware-java</artifactId>
     <version>0.0.10-SNAPSHOT</version>
   </parent>
-  <name>Base64</name>
-  <artifactId>Base64</artifactId>
+  <name>SMBCheck</name>
+  <artifactId>SMBCheck</artifactId>
   <packaging>jar</packaging>
   <build>
     <plugins>
@@ -23,20 +23,29 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>Main</mainClass>
+              <mainClass>SMBCheck</mainClass>
               <classpathPrefix>libs/</classpathPrefix>
             </manifest>
           </archive>
         </configuration>
       </plugin>
     </plugins>
-  </build>   
-  <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+  </build>
   <dependencies>
     <dependency>
-      <groupId>commons-codec</groupId>
-      <artifactId>commons-codec</artifactId>
-      <version>${commons-codecs.version}</version>
+      <groupId>net.eiroca</groupId>
+      <artifactId>eLibSys</artifactId>
+      <version>${eLib.version}</version>
+    </dependency>
+	<dependency>
+      <groupId>net.eiroca</groupId>
+      <artifactId>eLibHTTP</artifactId>
+      <version>${eLib.version}</version>
+    </dependency>
+    <dependency>
+       <groupId>eu.agno3.jcifs</groupId>
+       <artifactId>jcifs-ng</artifactId>
+       <version>${jcifs-ng.version}</version>
     </dependency>
   </dependencies>
 </project>

@@ -23,11 +23,12 @@ public class Proxy {
     final String targetHost = args.length > 0 ? args[0] : null;
     final Integer targetPort = args.length > 1 ? new Integer(args[1]) : null;
     final Integer localPort = args.length > 2 ? new Integer(args[2]) : targetPort;
+    final boolean dump = args.length > 3 ? true: false;
     if (targetHost == null || targetPort == null || localPort == null) {
-      System.err.println("Syntax tagethost targetport localport");
+      System.err.println("Syntax targethost targetport localport");
     }
     else {
-      final ProxyServer proxy = new ProxyServer(targetHost, targetPort, localPort, false);
+      final ProxyServer proxy = new ProxyServer(targetHost, targetPort, localPort, dump);
       proxy.start();
     }
   }

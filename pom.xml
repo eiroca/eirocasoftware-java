@@ -3,7 +3,7 @@
   <name>eirocasoftware-java</name>
   <groupId>net.eiroca</groupId>
   <artifactId>eirocasoftware-java</artifactId>
-  <version>0.0.10-SNAPSHOT</version>
+    <version>0.0.10-SNAPSHOT</version>
   <packaging>pom</packaging>
   <organization>
     <name>net.eiroca</name>
@@ -111,12 +111,15 @@
   </dependencies>
   <modules>
     <module>Base64</module>
+    <module>CRMAdapter</module>
+    <module>DateFormatTester</module>
+    <module>JodaDateTester</module>
     <module>Centralino_Sample</module>
     <module>ComparazioneEnergia</module>
-    <module>CRMAdapter</module>
     <module>Modeller</module>
     <module>ProgrammingTools</module>
     <module>Proxy</module>
+    <module>SMBCheck</module>
     <module>WikiTools</module>
   </modules>
 </project>

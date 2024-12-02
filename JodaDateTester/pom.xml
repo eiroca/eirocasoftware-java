@@ -5,8 +5,8 @@
     <artifactId>eirocasoftware-java</artifactId>
     <version>0.0.10-SNAPSHOT</version>
   </parent>
-  <name>Base64</name>
-  <artifactId>Base64</artifactId>
+  <name>JodaDateTester</name>
+  <artifactId>JodaDateTester</artifactId>
   <packaging>jar</packaging>
   <build>
     <plugins>
@@ -31,12 +31,12 @@
       </plugin>
     </plugins>
   </build>   
-  <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
   <dependencies>
     <dependency>
-      <groupId>commons-codec</groupId>
-      <artifactId>commons-codec</artifactId>
-      <version>${commons-codecs.version}</version>
+      <groupId>org.apache.flume</groupId>
+      <artifactId>flume-ng-core</artifactId>
+      <version>1.7.0</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>
