@@ -12,11 +12,13 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jdk.version>1.8</jdk.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <surefire.version>2.22.2</surefire.version>
     <junit.version>4.13.2</junit.version>
     <servlet.version>3.1.0</servlet.version>
-    <eLib.version>0.0.10</eLib.version>
-    <eJDBCDrivers.version>0.0.10</eJDBCDrivers.version>
+    <eLib.version>1.8.1</eLib.version>
+    <eJDBCDrivers.version>1.8.1</eJDBCDrivers.version>
     <commons-cli.version>1.5.0</commons-cli.version>
     <commons-codecs.version>1.15</commons-codecs.version>
     <commons-lang3.version>3.12.0</commons-lang3.version>
