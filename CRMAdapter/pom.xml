@@ -3,7 +3,7 @@
   <parent>
     <groupId>net.eiroca</groupId>
     <artifactId>eirocasoftware-java</artifactId>
-    <version>0.0.10-SNAPSHOT</version>
+    <version>1.17.3</version>
   </parent>
   <name>CRMAdapter</name>
   <artifactId>CRMAdapter</artifactId>
@@ -20,9 +20,10 @@
     </plugins>
   </build>
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents.client5/httpclient5 -->
     <dependency>
-      <groupId>org.apache.httpcomponents.client5</groupId>
-      <artifactId>httpclient5</artifactId>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
       <version>${httpclient.version}</version>
     </dependency>
     <dependency>

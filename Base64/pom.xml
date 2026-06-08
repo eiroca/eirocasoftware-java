@@ -3,7 +3,7 @@
   <parent>
     <groupId>net.eiroca</groupId>
     <artifactId>eirocasoftware-java</artifactId>
-    <version>0.0.10-SNAPSHOT</version>
+    <version>1.17.3</version>
   </parent>
   <name>Base64</name>
   <artifactId>Base64</artifactId>
@@ -36,7 +36,7 @@
     <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
-      <version>${commons-codecs.version}</version>
+      <version>${commons-codec.version}</version>
     </dependency>
   </dependencies>
 </project>
